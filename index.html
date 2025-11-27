@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MS Enterprises — uPVC & Interiors</title>
+  <meta name="description" content="MS Enterprises - uPVC windows, doors and interior work. Located in Lucknow. Contact for free site visit and quote."/>
+  <style>
+    :root{
+      --purple: #5b21b6;
+      --aqua: #0ea5a4;
+      --bg: #f7f9fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --text: #0f172a;
+      --radius: 14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial;background:linear-gradient(180deg,#f7fbff 0%, #f6f6ff 100%);color:var(--text);-webkit-font-smoothing:antialiased}
+    header{
+      background:var(--card);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 28px;
+      box-shadow:0 6px 20px rgba(84,86,108,0.06);
+      position:sticky; top:0; z-index:50;
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    /* Inline SVG logo container */
+    .logo-wrap{width:68px;height:68px;display:flex;align-items:center;justify-content:center}
+    nav a{margin-left:18px;text-decoration:none;color:var(--text);font-weight:600}
+    .cta{background:linear-gradient(90deg,var(--aqua),#00d4c3);color:white;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+
+    main{max-width:1200px;margin:28px auto;padding:0 20px}
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 460px;
+      gap:34px;
+      align-items:center;
+      margin-bottom:30px;
+    }
+    .hero h1{font-size:36px;color:var(--purple);margin:0 0 12px;line-height:1.05}
+    .hero p{color:var(--muted);font-size:17px;margin:0 0 18px}
+    .btn-row{display:flex;gap:12px;align-items:center}
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 10px 30px rgba(16,24,40,0.06);
+    }
+
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:20px}
+    .service h3{margin:6px 0 8px;color:var(--aqua)}
+    .service p{color:var(--muted)}
+
+    .about{display:flex;gap:20px;align-items:flex-start;margin-top:28px}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+    .gallery img{width:100%;height:110px;object-fit:cover;border-radius:10px}
+
+    form{display:grid;gap:12px;margin-top:12px}
+    input,textarea{padding:12px;border-radius:10px;border:1px solid #e6eef0;font-size:15px}
+    button{padding:12px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--purple),#7c3aed);color:white;font-weight:800;cursor:pointer}
+
+    footer{padding:28px 20px;text-align:center;color:var(--muted);margin-top:36px}
+    @media(max-width:980px){
+      .hero{grid-template-columns:1fr; padding-bottom:6px}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:520px){
+      nav a{display:none}
+      .hero h1{font-size:28px}
+      .gallery img{height:90px}
+    }
+
+    /* small badge */
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--purple),var(--aqua));color:white;font-weight:700;font-size:13px}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="logo-wrap">
+        <!-- Inline SVG logo: purple + aqua, initials MS -->
+        <svg width="68" height="68" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MS Enterprises logo">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#5b21b6"/>
+              <stop offset="1" stop-color="#7c3aed"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#0ea5a4"/>
+              <stop offset="1" stop-color="#00d4c3"/>
+            </linearGradient>
+          </defs>
+
+          <!-- background rounded square -->
+          <rect x="2" y="2" width="64" height="64" rx="12" fill="url(#g1)" opacity="0.96"/>
+          <!-- aqua accent swoosh -->
+          <path d="M12 46 C22 56, 46 58, 56 46 L56 38 C44 50, 24 50,12 38 Z" fill="url(#g2)" opacity="0.95"/>
+          <!-- MS letters -->
+          <g transform="translate(8,8)" fill="#fff" font-family="Segoe UI, Inter, Arial" font-weight="800">
+            <text x="2" y="36" font-size="28">MS</text>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div style="font-size:18px;font-weight:900">MS Enterprises</div>
+        <div style="font-size:13px;color:var(--muted)">uPVC • Interiors • Fabrication — Lucknow</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="cta">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="badge">Free Site Visit • Estimate</div>
+        <h1>Premium uPVC Windows, Doors & Modern Interiors</h1>
+        <p>MS Enterprises — लखनऊ में भरोसेमंद uPVC समाधान और Interior designing सेवाएँ। हम measurement से लेकर installation और after-sales support तक सब कुछ handle करते हैं।</p>
+
+        <div class="btn-row">
+          <a href="#contact" class="cta">Get a Quote</a>
+          <a href="#services" style="text-decoration:none;padding:10px 16px;border-radius:10px;background:transparent;border:1px solid #e6eef0;font-weight:700;color:var(--text)">Our Services</a>
+        </div>
+
+        <div style="margin-top:16px;color:var(--muted)">Phone/WhatsApp: <strong>+91 <span id="phone-placeholder">XXXXXXXXXX</span></strong></div>
+      </div>
+
+      <div class="card">
+        <!-- Placeholder hero image - replace with real project photo if available -->
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7e5b488b1f3b2a9b9e9a5a7f3b4b1b99" alt="uPVC window sample" style="width:100%;border-radius:12px;display:block;margin-bottom:12px;height:260px;object-fit:cover"/>
+        <h3 style="margin:0 0 6px;color:var(--purple)">Why choose MS Enterprises?</h3>
+        <p style="color:var(--muted);margin:0 0 8px">Premium profiles, weatherproof sealing, energy-efficient designs, and expert installation with warranty.</p>
+        <ul style="padding-left:18px;color:var(--muted)">
+          <li>Free measurement & site visit</li>
+          <li>Custom colors & finishes</li>
+          <li>On-time installation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="services" class="card" style="margin-top:18px">
+      <h2 style="margin:0 0 10px;color:var(--purple)">हमारी सेवाएँ</h2>
+      <div class="services">
+        <div class="service">
+          <div style="font-size:18px;font-weight:800;color:var(--text)">uPVC Windows & Doors</div>
+          <p>Soundproof, water-resistant uPVC frames — sliding, casement, tilt & turn, and french designs.</p>
+        </div>
+
+        <div class="service">
+          <div style="font-size:18px;font-weight:800;color:var(--text)">Interior Design & Fit-outs</div>
+          <p>Modular kitchens, wardrobes, false ceilings, partitions, and customized interiors.</p>
+        </div>
+
+        <div class="service">
+          <div style="font-size:18px;font-weight:800;color:var(--text)">Fabrication & Glazing</div>
+          <p>Aluminum/steel fabrication for frames, grills, and durable glazing solutions.</p>
+        </div>
+
+        <div class="service">
+          <div style="font-size:18px;font-weight:800;color:var(--text)">Repair & Maintenance</div>
+          <p>Replacement of seals, hardware upgrades, and on-site repairs with quick turnaround.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="card" style="margin-top:18px">
+      <h2 style="color:var(--purple)">About MS Enterprises</h2>
+      <div class="about">
+        <div style="flex:1">
+          <p style="color:var(--muted)">MS Enterprises ने कई residential और commercial प्रोजेक्ट्स सफलतापूर्वक पूरे किए हैं। हमारी टीम field-experienced installers और designers से मिलकर बनी है। हम measurement से लेकर installation और post-installation support तक पूरी ज़िम्मेदारी लेते हैं।</p>
+
+          <div style="margin-top:10px;color:var(--muted)">
+            <strong>Service Area:</strong> Lucknow & nearby districts<br/>
+            <strong>Experience:</strong> 7+ years<br/>
+            <strong>Guarantee:</strong> Material & workmanship warranty
+          </div>
+        </div>
+
+        <div style="width:320px">
+          <div style="font-weight:800;margin-bottom:8px">Project Gallery</div>
+          <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=8a8a5f1b1f1b8321e1a1f1a1a1a1a1a1" alt="">
+            <img src="https://images.unsplash.com/photo-1550583724-b269a3b5c3f5?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f" alt="">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=7e5b488b1f3b2a9b9e9a5a7f3b4b1b99" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:18px">
+      <h2 style="color:var(--purple)">Contact Us</h2>
+      <p style="color:var(--muted)">Send your details and we will call/WhatsApp you for free site visit & estimate.</p>
+
+      <form onsubmit="event.preventDefault(); handleForm()" style="max-width:720px">
+        <input id="name" placeholder="आपका नाम" required />
+        <input id="phone" placeholder="Mobile / WhatsApp" required />
+        <input id="location" placeholder="City / Area (e.g., Lucknow)" />
+        <textarea id="message" placeholder="Brief message (e.g., measurements, requirement)"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <script>
+        function handleForm(){
+          const n = document.getElementById('name').value || 'Customer';
+          const p = document.getElementById('phone').value || '';
+          alert('धन्यवाद, ' + n + '! हमने आपकी जानकारी प्राप्त कर ली है। हम जल्द ही ' + p + ' पर संपर्क करेंगे।');
+        }
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="yr"></span> MS Enterprises — uPVC • Interiors • Fabrication • Lucknow
+  </footer>
+
+  <script> document.getElementById('yr').textContent = new Date().getFullYear(); </script>
+</body>
+</html>
