@@ -192,31 +192,30 @@
       </div>
     </section>
 
-    <section id="contact" class="card" style="margin-top:18px">
-      <h2 style="color:var(--purple)">Contact Us</h2>
-      <p style="color:var(--muted)">Send your details and we will call/WhatsApp you for free site visit & estimate.</p>
+  <section id="contact" class="card" style="margin-top:18px">
+  <h2 style="color:var(--purple)">Contact Us</h2>
+  <p style="color:var(--muted)">Send your details and we will call/WhatsApp you for free site visit & estimate.</p>
 
-      <!-- Formsubmit + alert -->
-      <form id="contactForm" action="https://formsubmit.co/Saurabhgill41@gmail.com" method="POST" style="max-width:720px">
-        <input name="name" id="name" placeholder="आपका नाम" required />
-        <input name="phone" id="phone" placeholder="Mobile / WhatsApp" required />
-        <input name="location" id="location" placeholder="City / Area (e.g., Lucknow)" />
-        <textarea name="message" id="message" placeholder="Brief message (e.g., measurements, requirement)"></textarea>
-        <input type="hidden" name="_captcha" value="false">
-        <button type="submit">Send Message</button>
-      </form>
+  <!-- Formsubmit form -->
+  <form id="contactForm" action="https://formsubmit.co/Saurabhgill41@gmail.com" method="POST" style="max-width:720px">
+    <input name="name" id="name" placeholder="आपका नाम" required />
+    <input name="phone" id="phone" placeholder="Mobile / WhatsApp" required />
+    <input name="location" id="location" placeholder="City / Area (e.g., Lucknow)" />
+    <textarea name="message" id="message" placeholder="Brief message (e.g., measurements, requirement)"></textarea>
+    <input type="hidden" name="_captcha" value="false">
+    <button type="submit">Send Message</button>
+  </form>
 
-      <script>
-        const form = document.getElementById('contactForm');
-        form.addEventListener('submit', function(e){
-          const n = document.getElementById('name').value || 'Customer';
-          const p = document.getElementById('phone').value || '';
-          alert('धन्यवाद, ' + n + '! हमने आपकी जानकारी प्राप्त कर ली है। हम जल्द ही ' + p + ' पर संपर्क करेंगे।');
-        });
-      </script>
-    </section>
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e){
+      const n = document.getElementById('name').value || 'Customer';
+      const p = document.getElementById('phone').value || '';
+      alert('धन्यवाद, ' + n + '! हमने आपकी जानकारी प्राप्त कर ली है। हम जल्द ही ' + p + ' पर संपर्क करेंगे।');
+    });
+  </script>
+</section>
   </main>
-
   <footer>
     © <span id="yr"></span> MS Enterprises — uPVC • Interiors • Fabrication • Lucknow
   </footer>
@@ -224,3 +223,4 @@
   <script> document.getElementById('yr').textContent = new Date().getFullYear(); </script>
 </body>
 </html>
+
