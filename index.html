@@ -200,19 +200,31 @@
       <h2 style="color:var(--purple)">Contact Us</h2>
       <p style="color:var(--muted)">Send your details and we will call/WhatsApp you for free site visit & estimate.</p>
 
-      <form onsubmit="event.preventDefault(); handleForm()" style="max-width:720px">
-        <input id="name" placeholder="आपका नाम" required />
-        <input id="phone" placeholder="Mobile / WhatsApp" required />
-        <input id="location" placeholder="City / Area (e.g., Lucknow)" />
-        <textarea id="message" placeholder="Brief message (e.g., measurements, requirement)"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      <form id="contactForm" action="https://formsubmit.co/Saurabhgill41@gmail.com" method="POST" style="max-width:720px">
+  <input name="name" id="name" placeholder="आपका नाम" required />
+  <input name="phone" id="phone" placeholder="Mobile / WhatsApp" required />
+  <input name="location" id="location" placeholder="City / Area (e.g., Lucknow)" />
+  <textarea name="message" id="message" placeholder="Brief message (e.g., measurements, requirement)"></textarea>
 
-      <script>
-        function handleForm(){
-          const n = document.getElementById('name').value || 'Customer';
-          const p = document.getElementById('phone').value || '';
-          alert('धन्यवाद, ' + n + '! हमने आपकी जानकारी प्राप्त कर ली है। हम जल्द ही ' + p + ' पर संपर्क करेंगे।');
+  <!-- Optional: Redirect after submit -->
+  <input type="hidden" name="_next" value="https://your-github-username.github.io/thank-you.html">
+  
+  <!-- Disable CAPTCHA -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit">Send Message</button>
+</form>
+
+<script>
+  // Alert + Formsubmit
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e){
+    const n = document.getElementById('name').value || 'Customer';
+    const p = document.getElementById('phone').value || '';
+    alert('धन्यवाद, ' + n + '! हमने आपकी जानकारी प्राप्त कर ली है। हम जल्द ही ' + p + ' पर संपर्क करेंगे।');
+    // formsubmit automatically handles sending email
+  });
+</script>
         }
       </script>
     </section>
@@ -224,4 +236,5 @@
 
   <script> document.getElementById('yr').textContent = new Date().getFullYear(); </script>
 </body>
+
 </html>
